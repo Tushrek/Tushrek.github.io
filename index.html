@@ -1,13 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <title>Tony Teaches Tech</title>
+  <title>Tushar's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-info {
+      margin-left: 20px;
+    }
+    .name {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .title {
+      font-size: 24px;
+      color: #666666;
+    }
+    .social-links {
+      list-style: none;
+      display: flex;
+      margin-top: 10px;
+    }
+    .social-link {
+      margin-right: 10px;
+    }
+    .social-link a {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background-image: url("social-icons.png");
+      background-repeat: no-repeat;
+    }
+    .social-link a.linkedin {
+      background-position: 0 0;
+    }
+    .social-link a.github {
+      background-position: -32px 0;
+    }
+    .social-link a.twitter {
+      background-position: -64px 0;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section-title {
+      font-size: 28px;
+      border-bottom: 2px solid #333333;
+      padding-bottom: 10px;
+    }
+    .section-content {
+      margin-top: 20px;
+    }
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .skill-item {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #333333;
+      color: white;
+    }
+    .project-list {
+      list-style: none;
+    }
+    .project-item {
+      margin-bottom: 20px;
+    }
+    .project-image {
+      width: 100%;
+      height: auto;
+    }
+    .project-info {
+      margin-top: 10px;
+    }
+    .project-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .project-description {
+      font-size: 16px;
+      color: #666666;
+    }
+    
+  </style>
 </head>
 <body>
-<h1>GitHub Pages Website Tutorial</h1>
-<p>Hey, thanks for stopping by! You most likely came here after watching my GitHub Pages website video. If so, leave a comment on the video!</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o5g-lUuFgpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>-<a href="https://tonyteaches.tech" target="_blank">Tony Teaches Tech</a></p>
+  <div class="container">
+    
+   <div class="header">
+     <img src="tushar.jpg" alt="Tushar" class="profile-image">
+     <div class="profile-info">
+       <div class="name">Tushar</div>
+       <div class="title">Student of VIT Bhopal</div>
+       <ul class="social-links">
+         <li class="social-link"><a href="https://www.linkedin.com/in/tushrek/" class="linkedin"></a></li>
+         <li class="social-link"><a href="https://github.com/tushrek/" class="github"></a></li>
+         <li class="social-link"><a href="https://twitter.com/tushrek/" class="twitter"></a></li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="section">
+     <div class="section-title">About Me</div>
+     <div class="section-content">
+       <p>Hi, I'm Tushar, a passionate web developer and aspiring software engineer. I love creating beautiful and functional websites using modern technologies. I'm currently pursuing my Bachelor of Technology degree in Computer Science and Engineering from VIT Bhopal. I'm interested in working at Google because I admire their innovative products and culture.</p>
+     </div>
+   </div>
+
+   <div class="section">
+     <div class="section-title">Skills</div>
+     <div class="section-content">
+       <ul class="skill-list">
+         <li class="skill-item">HTML</li>
+         <li class="skill-item">CSS</li>
+         <li class="skill-item">JavaScript</li>
+         <li class="skill-item">React</li>
+         <li class="skill-item">Node.js</li>
+         <li class="skill-item">MongoDB</li>
+         <li class="skill-item">Git</li>
+         <li class="skill-item">Firebase</li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="section">
+     <div class="section-title">Projects</div>
+     <div class="section-content">
+       <ul class="project-list">
+         <li class="project-item">
+           <img src="todo-app.png" alt="Todo App" class="project-image">
+           <div class="project-info">
+             <div class="project-title">Todo App</div>
+             <div class="project-description">A simple and elegant todo app that lets you manage your tasks and goals. Built with React, Firebase, and Material UI.</div>
+           </div>
+         </li>
+         <li class="project-item">
+           <img src="weather-app.png" alt="Weather App" class="project-image">
+           <div class="project-info">
+             <div class="project-title">Weather App</div>
+             <div class="project-description">A responsive and user-friendly weather app that shows the current and forecast weather data for any location. Built with HTML, CSS, JavaScript, and OpenWeather API.</div>
+           </div>
+         </li>
+         <li class="project-item">
+           <img src="chat-app.png" alt="Chat App" class="project-image">
+           <div class="project-info">
+             <div class="project-title">Chat App</div>
+             <div class="project-description">A real-time chat app that allows you to communicate with other users in different rooms. Built with Node.js, Express, Socket.io, and Bootstrap.</div>
+           </div>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+  </div>
 </body>
 </html>
