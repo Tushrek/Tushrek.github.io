@@ -1,67 +1,38 @@
-// Create a scene
-var scene = new THREE.Scene();
-
-// Create a camera
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 5;
-
-// Create a renderer
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-// Create a sphere
-var geometry = new THREE.SphereGeometry(1, 32, 32);
-
-// Load texture for each social media platform
-var loader = new THREE.TextureLoader();
-var materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load('instagram-logo.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('github-logo.png') }),
-    // Add more materials for other social media platforms
-];
-
-// Create a mesh face material with the array of textures
-var faceMaterial = new THREE.MeshFaceMaterial(materials);
-
-// Create a mesh with the geometry and material
-var sphere = new THREE.Mesh(geometry, faceMaterial);
-scene.add(sphere);
-
-// Add event listener for mouse click to redirect to social media page
-window.addEventListener('click', function (event) {
-    // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
-    var mouse = new THREE.Vector2();
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-    // Update the picking ray with the camera and mouse position
-    var raycaster = new THREE.Raycaster();
-    raycaster.setFromCamera(mouse, camera);
-
-    // Calculate objects intersecting the picking ray
-    var intersects = raycaster.intersectObjects(scene.children);
-
-    // If an object is intersected, redirect to the corresponding social media page
-    if (intersects.length > 0) {
-        var materialIndex = intersects[0].face.materialIndex;
-        switch (materialIndex) {
-            case 0:
-                window.location.href = 'https://www.instagram.com/tushrek_';
-                break;
-            case 1:
-                window.location.href = 'https://github.com/tushrek';
-                break;
-            // Add more cases for other social media platforms
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bloopdance Clone</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
-    }
-}, false);
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50a8a1;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header h1 {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bloopdance Clone</h1>
+        </div>
+    </header>
 
-// Animation loop
-function animate() {
-    requestAnimationFrame(animate);
-    sphere.rotation.x += 0.01;
-    sphere.rotation.y += 0.01;
-    renderer.render(scene, camera);
-}
-animate();
+    <div class="container">
+        <p>Welcome to my Bloopdance clone! This is a simple static website example.</p>
+    </div>
+</body>
+</html>
