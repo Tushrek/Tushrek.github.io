@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bloopdance Clone</title>
+    <title>Interactive Website</title>
     <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+        #myButton {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #50a8a1;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-        header h1 {
-            padding: 5px 0;
+        #myButton:hover {background-color: #3e8e41}
+        #myButton:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bloopdance Clone</h1>
-        </div>
-    </header>
 
-    <div class="container">
-        <p>Welcome to my Bloopdance clone! This is a simple static website example.</p>
-    </div>
+<button id="myButton" onclick="changeColor()">Click me</button>
+
+<script>
+function changeColor() {
+    var color = '#'+ Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById("myButton").style.backgroundColor = color;
+}
+</script>
+
 </body>
 </html>
